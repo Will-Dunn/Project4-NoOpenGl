@@ -1,5 +1,6 @@
 //
 // Created by William Dunn on 5/3/20.
+//Curve algorithims based off https://pomax.github.io/bezierinfo/
 //
 
 #ifndef SVG_RENDERING_ALGOPATH_H
