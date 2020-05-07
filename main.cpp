@@ -23,6 +23,7 @@ const bool bigline=false;
 vector<point> Points;
 vector<Line> lines;
 vector <Path> paths;
+char* f;
 long totalTime;
 char grid[height][width];
 
@@ -73,13 +74,14 @@ void parsesvg(){
 /*ParseSVG loosely parses SVG files and send them to various algorithims to draw lines
 * This code probably is the most inefficent thing ever but I could not find a svg parser online that did not just immediatly render the image instead of just
 */
-    ifstream file("/Users/williamdunn/Desktop/Project4-NoOpenGl/heart.svg");
+    ifstream file(f);
     string line;
     string li="line";
     //string d="d=";
     string id="id";
     getline(file,line);
     while (!file.eof()){
+
         if(line.find("path")!= string::npos) {
 
 
@@ -736,9 +738,11 @@ void myDisplay() {
     //glFlush();
 }
 int main(int argc, char **argv) {
+    f=argv[1];
+    cout<<argc<<endl;
     //parsesvg();
     //to run custom graphs  change argument 3 to y
-    if(argc>3)
+    if(argc>4){
     if(argv[3][0]=='y') {
         string inp;
         cout << "enter 1 for naive or 0 for complex" << endl;
@@ -788,12 +792,12 @@ int main(int argc, char **argv) {
             }
             file<<endl;
         }
-    }
+    }}
     else{
 
         choice=1;
         mySVGDisplay();
-        fstream file(argv[1]);
+        fstream file(argv[2]);
         for(int i=0;i<height;i++){
             for(int j=0;j<width;j++){
                 if(grid[i][j]!='*'){
@@ -805,7 +809,7 @@ int main(int argc, char **argv) {
         }
         choice=0;
         mySVGDisplay();
-        fstream file1(argv[2]);
+        fstream file1(argv[3]);
         for(int i=0;i<height;i++){
             for(int j=0;j<width;j++){
                 if(grid[i][j]!='*'){
