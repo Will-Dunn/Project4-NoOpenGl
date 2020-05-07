@@ -95,7 +95,13 @@
 		<Unit filename="/Users/williamdunn/Desktop/Project4-NoOpenGl/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
+		<Unit filename="/Users/williamdunn/Desktop/Project4-NoOpenGl/Casteljau.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
 		<Unit filename="/Users/williamdunn/Desktop/Project4-NoOpenGl/heart.svg">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/williamdunn/Desktop/Project4-NoOpenGl/naive.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

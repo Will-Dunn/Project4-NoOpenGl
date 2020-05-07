@@ -10,6 +10,8 @@ project(Project4_NoOpenGl)
 # etc....
 
 set (input01 "heart.svg")
+set (input02 "Casteljau.txt")
+set (input03 "naive.txt")
 
 
 
@@ -18,7 +20,7 @@ set (input01 "heart.svg")
 
 
 # Copy data files to build dir
-foreach(file IN LISTS input01 )
+foreach(file IN LISTS input01 input02 input03)
     configure_file(${file} ${file} COPYONLY)
 endforeach()
 set(CMAKE_CXX_STANDARD 14)
