@@ -13,7 +13,7 @@ env:
   ###      input file
   ###      Example: INPUT_FILES: -f input01.txt input02.txt
   INPUT_FILES: heart.svg
-  OUTPUT_FILES: output.txt naive.txt
+  OUTPUT_FILES: Casteljau.txt naive.txt
 
 
 
